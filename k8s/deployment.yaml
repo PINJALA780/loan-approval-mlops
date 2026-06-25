@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+
+metadata:
+  name: loan-approval
+
+spec:
+  replicas: 1
+
+  selector:
+    matchLabels:
+      app: loan-approval
+
+  template:
+    metadata:
+      labels:
+        app: loan-approval
+
+    spec:
+      containers:
+      - name: loan-approval
+
+        image: venkatesh2007567/loan-approval-api:latest
+
+        imagePullPolicy: Always
+
+        ports:
+        - containerPort: 8000
+

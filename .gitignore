@@ -1,0 +1,16 @@
+venv/
+venv313/
+
+__pycache__/
+*.pyc
+
+models/
+mlruns/
+mlflow.db
+
+.env
+
+data/raw/
+data/processed/
+
+*.log
